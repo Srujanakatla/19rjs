@@ -67,7 +67,7 @@ let nums = Number(str);
 console.log(nums); 
 console.log(typeof nums); 
 
-onsole.log(Number("123")); 
+console.log(Number("123")); 
 console.log(Number("123.45"));
 
 let strNumber = "256";
