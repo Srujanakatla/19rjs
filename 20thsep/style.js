@@ -45,6 +45,7 @@ console.log(family);
 
   var e = 123456;
   console.log(e.toExponential(2));
+console.log(e.toExponential());
 
   var f = 234.56345;
   console.log(f.toFixed(2));
@@ -57,12 +58,25 @@ console.log(Number.isNaN("NaN"));
 console.log(Number.isNaN(123)); 
 console.log(Number.isNaN("srujana")); 
 console.log(Number.isNaN("123")); 
+console.log(isNaN("hello"));
+console.log(isNaN(NaN));
 // console.log(Number.isNaN(srujana)); 
 
 let str = "123";
 let nums = Number(str);
 console.log(nums); 
 console.log(typeof nums); 
+
+onsole.log(Number("123")); 
+console.log(Number("123.45"));
+
+let strNumber = "256";
+let strFloat = "256.78";
+let invalidStr = "256abc";
+
+console.log(Number(strNumber)); 
+console.log(Number(strFloat)); 
+console.log(Number(invalidStr));
 
 const number = 45609;
 console.log(number.toLocaleString());  
