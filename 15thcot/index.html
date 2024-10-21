@@ -1,0 +1,170 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srujana Cards Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        #content {
+            text-align: center;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .see-more-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .see-more-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body onload="srujana()">
+
+    <div id="content">
+        
+    </div>
+
+    <div id="card-container" class="card-container">
+        
+    </div>
+
+    <button id="seeMoreBtn" class="see-more-btn">See More</button>
+
+    <script>
+        function srujana() {
+            setTimeout(function() {
+                let contentDiv = document.getElementById("content");
+                contentDiv.innerHTML = `<h1>srujana</h1><img id="image" src="https://imageupscaler.com/wp-content/uploads/2024/07/deblured-cutty-fox.jpg" width="250"><button>Click</button>`;
+                contentDiv.style.color = "blue";  
+                contentDiv.style.transition = "1s ease-in 3s";  
+
+                let image = document.getElementById("image");
+                image.style.transition = "all 5s ease";  
+                
+                setTimeout(() => {
+                    image.style.borderRadius = "50%";  
+                    image.style.opacity = "0.5";  
+                }, 100);  
+            }, 2000); 
+        }
+        document.getElementById('seeMoreBtn').addEventListener('click', function() {
+            const cardContainer = document.getElementById('card-container');
+            const currentCardCount = cardContainer.children.length;
+            
+            for (let i = 1; i <= 5; i++) {
+                const card = document.createElement('div');
+                card.className = 'card';
+                const cardNumber = currentCardCount + i;
+                card.innerHTML = `<h3>Card ${cardNumber}</h3><p>This is card number ${cardNumber}.</p>`;
+                cardContainer.appendChild(card);
+            }
+        });
+    </script>
+
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See More Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .see-more-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .see-more-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="card-container" class="card-container">
+    </div>
+
+    <button id="seeMoreBtn" class="see-more-btn">See More</button>
+
+    <script>
+        document.getElementById('seeMoreBtn').addEventListener('click', function() {
+            var cardContainer = document.getElementById('card-container');
+            var currentCardCount = cardContainer.children.length;
+            for (let i = 1; i <= 5; i++) {
+                const card = document.createElement('div');
+                card.className = 'card';
+                const cardNumber = currentCardCount + i;
+                card.innerHTML = `<h3>Card ${cardNumber}</h3><p>This is card number ${cardNumber}.</p><img src="https://www.wallpaperflare.com/static/226/1021/261/food-tomatoes-hamburgers-salad-wallpaper.jpg" width="150"<button>clickme</button>`;
+                card.style.backgroundColor = '#fefefe';
+                card.style.border = '1px solid #ccc';
+                card.style.color = 'white';
+
+                cardContainer.appendChild(card);
+            }
+        });
+    </script>
+
+</body>
+</html>
