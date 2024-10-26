@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Card Example</title>
+  <style>
+    .card {
+      width: 300px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      margin: 20px auto;
+      background-color: blue;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .card p {
+      font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+    .card span {
+      font-size: 16px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <script>
+    
+    const cardDiv = document.createElement('div');
+    cardDiv.classList.add('card');
+
+
+    const productImage = document.createElement('img');
+    productImage.setAttribute('src', 'https://cubanvr.com/wp-content/uploads/2023/07/ai-image-generators.webp'); // Placeholder image URL
+    productImage.setAttribute('alt', 'Product Image');
+
+    const productDescription = document.createElement('p');
+    productDescription.textContent = 'Product Title';
+
+    const productPrice = document.createElement('span');
+    productPrice.textContent = '$99.99';
+
+    cardDiv.appendChild(productImage);
+    cardDiv.appendChild(productDescription);
+    cardDiv.appendChild(productPrice);
+
+    document.body.appendChild(cardDiv);
+  </script>
+  
+</body>
+</html>
