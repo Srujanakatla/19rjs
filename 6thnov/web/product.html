@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+        }
+        .container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+        .card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 8px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        .card button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .card button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <script>
+        if (localStorage.getItem("isLoggedIn") !== "true") {
+            window.location.href = "login.html";
+        }
+
+        const products = [
+            { "id": 10, "title": "Washing Machine", "price": 10000.95, "image": "https://www.aztecdomestics.co.uk/wp-content/uploads/2020/12/AD01921.jpg" },
+            { "id": 20, "title": "Men's T-Shirt", "price": 22.3, "image": "https://m.media-amazon.com/images/I/71I-cik1CyL._AC_UL1500_.jpg" },
+            { "id": 30, "title": "Laptop", "price": 55.99, "image": "https://th.bing.com/th/id/OIP.ENFiI2expgUp0QSSpOaWQwHaF5?rs=1&pid=ImgDetMain" }
+        ];
+
+        let containerDiv = document.querySelector(".container");
+
+        products.forEach(product => {
+            containerDiv.innerHTML += `
+                <div class="card">
+                    <img src="${product.image}" alt="${product.title}">
+                    <h5>${product.title}</h5>
+                    <p>Price: $${product.price}</p>
+                    <button onclick="buyNow()">Buy Now</button>
+                </div>
+            `;
+        });
+
+        function buyNow() {
+            window.location.href = "buy.html";
+        }
+    </script>
+</body>
+</html>
