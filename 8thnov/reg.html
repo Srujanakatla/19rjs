@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration and Login</title>
+</head>
+<body>
+    <h2>Register</h2>
+    <input type="text" id="registerUsername" placeholder="Enter Username" required>
+    <input type="password" id="registerPassword" placeholder="Enter Password" required>
+    <button onclick="registerUser()">Register</button>
+    <h2>Login</h2>
+    <input type="text" id="loginUsername" placeholder="Enter Username" required>
+    <input type="password" id="loginPassword" placeholder="Enter Password" required>
+    <button onclick="loginUser()">Login</button>
+
+    <script>
+        
+        function getUsers() {
+            return JSON.parse(localStorage.getItem("users")) || [];
+        }
+        function saveUsers(users) {
+            localStorage.setItem("users", JSON.stringify(users));
+        }
+        function registerUser() {
+            const username = document.getElementById("registerUsername").value;
+            const password = document.getElementById("registerPassword").value;
+            
+            if (username && password) {
+                let users = getUsers();
+                if (users.some(user => user.username === username)) {
+                    alert("Username already exists. Please choose a different one.");
+                    return;
+                }
+
+                users.push({ username, password });
+                saveUsers(users);
+                alert("User registered successfully.");
+            } else {
+                alert("Please enter both username and password.");
+            }
+        }
+
+        function loginUser() {
+            const username = document.getElementById("loginUsername").value;
+            const password = document.getElementById("loginPassword").value;
+
+            let users = getUsers();
+
+            const userExists = users.some(user => user.username === username && user.password === password);
+
+            if (userExists) {
+                alert("Login successful.");
+            } else {
+                alert("Invalid credentials. Please try again.");
+            }
+        }
+    </script>
+</body>
+</html>
