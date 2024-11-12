@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./calculator.css">
+</head>
+<body>
+    <!-- <h1>calculator</h1> -->
+    <div id="con">
+    <p id="p">0</p>
+    <!-- <h1>calculator</h1> -->
+  <div>
+    <button onclick="validate('7')">7</button>
+    <button onclick="validate('8')">8</button>
+    <button onclick="validate('9')">9</button>
+    <button onclick="validate('%')" id="mul">%</button>
+  </div>
+   <div> 
+    <button onclick="validate('6')">6</button>
+    <button onclick="validate('5')">5</button>
+    <button onclick="validate('4')">4</button>
+    <button onclick="validate('*')" id="mul">*</button>
+</div>
+<div>
+    <button onclick="validate('3')">3</button>
+    <button onclick="validate('2')">2</button>
+    <button onclick="validate('1')">1</button>
+    <button onclick="validate('-')" id="mul">-</button>
+</div>
+<div>
+    <button onclick="validate('+')" id="mul">+</button>
+    <button onclick="getres('=')" id="mul">=</button>
+    <button onclick="validate('.')" id="mul">.</button>
+    <button onclick="validate('0')" id="mul">0</button>
+</div>
+    <button onclick="clearDisplay('c')" class="clear">c</button>
+  </div> 
+ 
+
+  <script src="./calcuator.js"></script>
+</body>
+</html>

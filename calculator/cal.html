@@ -1,0 +1,110 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Calculator</title>
+    <style>
+        /* Styling the calculator container */
+        .calculator {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 200px;
+            margin: 20px auto;
+        }
+
+        /* Result display styling */
+        #result {
+            width: 100%;
+            height: 50px;
+            margin-bottom: 10px;
+            font-size: 24px;
+            text-align: right;
+            padding: 10px;
+            border: 1px solid #333;
+            background-color: #f4f4f4;
+        }
+
+        /* Button grid styling */
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+
+        /* Button styling */
+        .button {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid #333;
+            background-color: #ddd;
+            cursor: pointer;
+            opacity: 0; /* Hidden by default */
+            transition: opacity 0.3s;
+        }
+
+        /* Hover effect for buttons */
+        .button:hover {
+            opacity: 1;
+            background-color: #bbb;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <!-- Result display -->
+        <!-- <div id="result">0</div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <div class="button" onclick="validate(1)">1</div>
+            <div class="button" onclick="validate(2)">2</div>
+            <div class="button" onclick="validate(3)">3</div>
+            <div class="button" onclick="validate('+')">+</div>
+            <div class="button" onclick="validate(4)">4</div>
+            <div class="button" onclick="validate(5)">5</div>
+            <div class="button" onclick="validate(6)">6</div>
+            <div class="button" onclick="validate('-')">-</div>
+            <div class="button" onclick="validate(7)">7</div>
+            <div class="button" onclick="validate(8)">8</div>
+            <div class="button" onclick="validate(9)">9</div>
+            <div class="button" onclick="validate('*')">*</div>
+            <div class="button" onclick="validate(0)">0</div>
+            <div class="button" onclick="clearDisplay()">C</div>
+            <div class="button" onclick="getres()">=</div>
+            <div class="button" onclick="validate('/')">/</div>
+        </div>
+    </div>
+
+    <script>
+        let resultDisplay = document.getElementById("result");
+
+        function validate(input) {
+            // If initial display is "0", replace it with the input; otherwise, append
+            if (resultDisplay.textContent === "0") {
+                resultDisplay.textContent = input;
+            } else {
+                resultDisplay.textContent += input;
+            }
+        }
+
+        function getres() {
+            try {
+                // Calculate and display the result
+                resultDisplay.textContent = eval(resultDisplay.textContent);
+            } catch (error) {
+                resultDisplay.textContent = "Error";
+            }
+        }
+
+        function clearDisplay() {
+            // Clear the display to show "0"
+            resultDisplay.textContent = "0";
+        }
+    </script>
+</body>
+</html> --> -->

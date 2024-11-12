@@ -1,0 +1,23 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: whitesmoke;
+}
+div {
+    font-size: 1.5em;
+    color: #333;
+    padding: 20px;
+    max-width: 600px;
+    text-align: center;
+    border: 2px solid blue;
+    border-radius: 8px;
+    background-color: pink;
+    box-shadow: 0px 4px 8px black;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}

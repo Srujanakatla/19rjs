@@ -1,0 +1,37 @@
+body{
+    /* display: flex; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+button {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 70px;
+    width: 70px;
+    /* flex-direction: column; */
+}
+#con{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    flex-direction: column;
+}
+p{
+    text-align: center;
+}
+#mul{
+    background-color: aqua;
+}
+/* #add{
+    background-color: yellow;
+}
+#div{
+    background-color: blueviolet;
+} */
+.clear{
+    background-color: chocolate;
+}
